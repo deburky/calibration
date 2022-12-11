@@ -152,7 +152,9 @@ class CalibrationModule():
     def plot_calibration_curve(self, y_true, y_pred, ax=None):
         """ Draw a calibration curve.
         
-        This function 
+        This function generates a calibration curve, which is a plot that
+        shows the relationship between the predicted probabilities output
+        by a model and the actual label proportions in the data.
 
         
         Parameters
