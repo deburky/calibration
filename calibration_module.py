@@ -102,7 +102,6 @@ class CalibrationModule():
             True labels
         y_pred : array-like
             Predicted probabilities    
-
         """
 
         bins, binned_preds, prob_true, prob_pred, bin_size = self.calc_bins(y_true, y_pred)
@@ -155,7 +154,6 @@ class CalibrationModule():
         This function generates a calibration curve, which is a plot that
         shows the relationship between the predicted probabilities output
         by a model and the actual label proportions in the data.
-
         
         Parameters
         ----------
