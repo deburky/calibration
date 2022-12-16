@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 
 class CalibrationModule():
     
@@ -22,7 +23,6 @@ class CalibrationModule():
         
     def calc_bins(self, y_true, y_pred):
         """Calculate bins with observed and predicted values.
-
         Parameters
         ----------
         y_true : array-like
@@ -77,7 +77,6 @@ class CalibrationModule():
     
     def plot_reliability_diagram(self, y_true, y_pred):
         """Draw reliability diagram.
-
         The reliability diagram is a graphical tool for visualizing the calibration 
         of a classifier. It plots the predicted probabilities (or confidences) of 
         the positive class on the x-axis and the observed accuracies on the y-axis, 
@@ -86,16 +85,13 @@ class CalibrationModule():
         This code calculates the predicted probabilities, observed accuracies, and bin 
         sizes for each interval, and it plots them as a bar chart on a scatter plot, 
         with error bars indicating the uncertainty in the observed accuracies.
-
         In addition to the reliability diagram, this code also calculates and displays 
         the Expected Calibration Error (ECE) and Maximum Calibration Error (MCE) 
         for the classifier, as defined in Guo et al 2017.
-
         Note (Guo et al. 2017):
         ... reliability diagrams do not display the proportion 
         of samples in a given bin, and thus cannot be used to estimate 
         how many samples are calibrated.
-
         Parameters
         ----------
         y_true : array-like
