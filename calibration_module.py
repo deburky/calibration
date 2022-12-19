@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.gridspec import GridSpec
 import matplotlib.patches as mpatches
+from sklearn.calibration import calibration_curve, CalibrationDisplay
 
 class CalibrationModule():
     
@@ -151,6 +153,9 @@ class CalibrationModule():
         shows the relationship between the predicted probabilities output
         by a model and the actual label proportions in the data.
         
+        For more information:
+        https://scikit-learn.org/stable/auto_examples/calibration/plot_calibration_curve.html
+        
         Parameters
         ----------
         y_true : array-like
@@ -158,28 +163,15 @@ class CalibrationModule():
         y_pred : array-like
             Predicted probabilities
         """
+
+        prob_true, prob_pred = calibration_curve(y_true, y_pred, n_bins=10)
         
-        bins, binned_preds, prob_true, prob_pred, bin_size = self.calc_bins(y_true, y_pred)
-        ece, mce = self.calc_metrics(y_true, y_pred)
-        
-        if ax==None:
-            fig = plt.figure(figsize=(8, 8), dpi=600)
-            ax = plt.gca()
-        else:
-            plt.sca(ax)
-        plt.plot([0, 1],[0, 1], '--', color='gray', linewidth=2, label="Perfectly calibrated model")
-        plt.plot(prob_true, prob_pred, "s-", color='#7570b3', label = 'Classifier')
-        
-        # x/y labels
-        plt.ylabel("Actual probability")
-        plt.xlabel("Predicted probability")
+        fig = plt.figure(figsize=(8, 8), dpi=600)
+        gs = GridSpec(4, 2)
+        colors = plt.cm.get_cmap("Dark2")
 
-        plt.legend()
-        plt.xticks()
-        plt.yticks()
-
-        plt.grid(color='gray', linestyle='dashed')
-
-        plt.tight_layout()
-
+        ax_calibration_curve = fig.add_subplot(gs[:2, :2])
+        disp = CalibrationDisplay(prob_true, prob_pred, y_pred)
+        disp.plot(color=colors(3), ax=ax_calibration_curve, name='Prediction')
+        ax_calibration_curve.grid()
         plt.show()
