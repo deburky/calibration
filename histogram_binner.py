@@ -33,8 +33,6 @@ class HistogramBinner:
         self.min_proba = min_proba
         self.max_proba = max_proba
         self.bins = np.linspace(min_proba, max_proba, self.n_bins)
-        self.bin_true = bin_true
-        self.bin_pred = bin_pred
         self.histogram_bins = []
         self.accuracy_bins = []
         
@@ -56,9 +54,10 @@ class HistogramBinner:
     def learn_calibration_map(self, y_true, y_pred):
         # Histogram Binning
         self.histogram_bins = []
-        for i in range(len(self.bin_pred) - 1):
-            last_prob = self.bin_pred[i]
-            next_first_prob = self.bin_pred[i+1]
+        bin_true, bin_pred = self.calculate_bins(y_true, y_pred)
+        for i in range(len(bin_pred) - 1):
+            last_prob = bin_pred[i]
+            next_first_prob = bin_pred[i+1]
             # avoid zeros to be counted as bin edges
             if next_first_prob != 0:
                 self.histogram_bins.append((last_prob + next_first_prob) / 2.0)
@@ -69,8 +68,8 @@ class HistogramBinner:
                 self.histogram_bins.append(1.0)
         # add last bin edge
         self.histogram_bins.append(1.0)
-        self.accuracy_bins = np.array([np.mean(value) for value in self.bin_true])
-        
+        self.accuracy_bins = np.array([np.mean(value) for value in bin_true])
+    
     def apply_calibration_map(self, y_pred: np.ndarray) -> np.ndarray:
         # to account for edge cases where probability lies outside bin range
         eps = np.finfo(y_pred.dtype).eps
