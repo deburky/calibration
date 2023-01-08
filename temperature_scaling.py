@@ -12,13 +12,13 @@ class TemperatureScaling:
     """
     
     def __init__(self, sample_weight=None):
-    """Initialize the temperature scaling calibration class.
+        """Initialize the temperature scaling calibration class.
         
-    Parameters
-    ----------
-    sample_weight : float, optional
-        Sample weight (constant). If not provided, no sample weight is used.
-    """
+        Parameters
+        ----------
+        sample_weight : float, optional
+            Sample weight (constant). If not provided, no sample weight is used.
+        """
         self.sample_weight = sample_weight
 
     def fit(self, y_true, y_pred):
