@@ -108,8 +108,7 @@ class LogisticRegressionCustomLoss:
     def predict(self, X: np.ndarray) -> List[int]:
         linear_model = np.dot(X, self.weights)
         y_pred = self._sigmoid(linear_model)
-        y_pred_class = [1 if p >= 0.5 else 0 for p in y_pred]
-        return y_pred_class
+        return [1 if p >= 0.5 else 0 for p in y_pred]
 
     def predict_proba(self, X: np.ndarray) -> np.ndarray:
         if self.use_bias:
@@ -117,5 +116,4 @@ class LogisticRegressionCustomLoss:
             y_logit += self.weights[-1]
         else:
             y_logit = np.dot(X, self.weights)
-        y_pred = self._sigmoid(y_logit)
-        return y_pred
+        return self._sigmoid(y_logit)
