@@ -61,5 +61,4 @@ class TemperatureScaling:
         if min(y_pred) == 0:
             y_pred += 1e-7 
 
-        y_pred_calibrated = y_pred / self.scalar_
-        return y_pred_calibrated
+        return y_pred / self.scalar_
