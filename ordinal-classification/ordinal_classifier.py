@@ -11,6 +11,18 @@ class OrdinalClassifier(BaseEstimator, ClassifierMixin):
     """
     A classifier that can be trained on a range of classes.
     @param classifier: A scikit-learn classifier.
+    
+    Change: changed the calculation of intermediate probabilities 
+    to be the product of the previous and the next class 
+    probabilities as in the original paper.
+    
+    Source:
+        Eibe Frank and Mark Hall. 
+        A Simple Approach to Ordinal Classification. 
+        Machine Learning: ECML 2001. 
+        Lecture Notes in Computer Science, vol 2167. 
+        Springer, Berlin, Heidelberg. 
+        https://link.springer.com/chapter/10.1007/3-540-44795-4_13
     """
 
     def __init__(self, clf):
@@ -43,7 +55,7 @@ class OrdinalClassifier(BaseEstimator, ClassifierMixin):
         p_x_first = 1 - predicted[0]
         p_x_last = predicted[-1]
         p_x_middle = [
-            predicted[i] - predicted[i + 1]
+            predicted[i] * (1 - predicted[i + 1]) # product as per paper
             for i in range(len(predicted) - 1)
         ]
 

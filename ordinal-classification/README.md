@@ -21,12 +21,11 @@ For example we model the probability of class 1 out of 5 classes as:
 For the last class:
 - $P(target > 4) = P(target = 5)$
 
-The classes in between are modeled as:
-- $P(target > k) - P(target > k+1)$
+The classes in between can be modeled either as:
+- $P(target > k) - P(target > k+1)$ (approach in the scikit-learn implementation by @mosh98)
+- $P(target > k) × (1-P(target > k+1))$ (original approach, p. 148)
 
-Note that this differs from the original paper, where they use multiplication instead of subtraction.
-
-This way we can model the ordinal nature of the target variable.
+Both approaches work well, but the original approach showed better results on our dataset.
 
 **Reference:**
 > Eibe Frank and Mark Hall. A Simple Approach to Ordinal Classification. Machine Learning: ECML 2001. Lecture Notes in Computer Science, vol 2167. Springer, Berlin, Heidelberg. [Link](https://link.springer.com/chapter/10.1007/3-540-44795-4_13)
