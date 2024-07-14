@@ -4,7 +4,7 @@ Author: [@deburky](https://github.com/deburky).
 
 This notebook and attached scripts serve to track some experiments with simple ordinal classification approach (SOCA) proposed by Eibe Frank and Mark Hall.
 
-I owe the discovery of this to @mosh98. You can find their implementation [here](https://github.com/mosh98/Ordinal_Classifier).
+I owe the discovery of this to @mosh98. You can find their implementation [here](https://github.com/mosh98/Ordinal_Classifier). Corresponding Medium post is provided [here](https://towardsdatascience.com/simple-trick-to-train-an-ordinal-regression-with-any-classifier-6911183d2a3c).
 
 ### Simple Ordinal Classification Approach
 
@@ -23,6 +23,8 @@ For the last class:
 
 The classes in between are modeled as:
 - $P(target > k) - P(target > k+1)$
+
+Note that this differs from the original paper, where they use multiplication instead of subtraction.
 
 This way we can model the ordinal nature of the target variable.
 
