@@ -1,8 +1,8 @@
-# <span style="font-family: Arial, sans-serif; color:#97f788">Ordinal Classification</span>
+# Ordinal Classification
 
-<span style="font-family: Arial, sans-serif; color:navyblue">Author: <a href="https://github.com/deburky" title="GitHub link">https://github.com/deburky</a></span>
+Author: [@deburky](https://github.com/deburky).
 
-This notebook tracks some experiments with simple ordinal classification approach (SOCA) proposed by Eibe Frank and Mark Hall.
+This notebook and attached scripts serve to track some experiments with simple ordinal classification approach (SOCA) proposed by Eibe Frank and Mark Hall.
 
 I owe the discovery of this to @mosh98. You can find their implementation [here](https://github.com/mosh98/Ordinal_Classifier).
 
