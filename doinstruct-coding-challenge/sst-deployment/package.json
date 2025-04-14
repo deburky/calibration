@@ -1,0 +1,34 @@
+{
+  "name": "sst-new",
+  "version": "1.0.0",
+  "description": "Serverless API for generating lesson cards using LLM",
+  "type": "module",
+  "scripts": {
+    "dev": "sst dev",
+    "build": "sst build",
+    "deploy": "sst deploy",
+    "remove": "sst remove",
+    "console": "sst console",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "sst",
+    "serverless",
+    "openai",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "openai": "^4.28.0",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.134",
+    "@types/node": "^20.11.24",
+    "aws-cdk-lib": "^2.142.1",
+    "constructs": "^10.3.0",
+    "sst": "^2.40.0",
+    "typescript": "^5.3.3"
+  }
+}
