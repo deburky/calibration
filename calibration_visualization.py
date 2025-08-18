@@ -9,13 +9,14 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from calibration_module import CalibrationModule  # type: ignore
 from scipy.special import expit
 from sklearn.calibration import CalibratedClassifierCV, CalibrationDisplay
 from sklearn.datasets import make_classification
 from sklearn.linear_model import LogisticRegression, LogisticRegressionCV
 from sklearn.metrics import brier_score_loss, log_loss, roc_auc_score
 from sklearn.model_selection import train_test_split
+
+from calibration_module import CalibrationModule  # type: ignore
 
 # Try to import various ML libraries, handle gracefully if not available
 try:
@@ -94,13 +95,9 @@ class PDCalibrationDemo:
                 f"Generated data: {self.y.sum()} defaults out of {len(self.y)} ({self.y.mean():.3%})"
             )
         else:
-            # path_to_data = (
-            #     "https://raw.githubusercontent.com/deburky/boosting-scorecards/"
-            #     "refs/heads/main/rfgboost/BankCaseStudyData.csv"
-            # )
             path_to_data = (
-                "/Users/deburky/Documents/python/python-ml-projects/"
-                "random-forest/BankCaseStudyData.csv"
+                "https://raw.githubusercontent.com/deburky/boosting-scorecards/"
+                "refs/heads/main/rfgboost/BankCaseStudyData.csv"
             )
             df = pd.read_csv(path_to_data)
             df["is_default"] = df["Final_Decision"].map({"Accept": 0, "Decline": 1})
