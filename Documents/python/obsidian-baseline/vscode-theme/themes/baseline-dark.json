@@ -1,0 +1,487 @@
+{
+  "$schema": "vscode://schemas/color-theme",
+  "name": "Baseline Dark",
+  "type": "dark",
+  "semanticHighlighting": false,
+  "colors": {
+    "editor.background": "#1e1e1e",
+    "editor.foreground": "#abb2bf",
+    "editorLineNumber.foreground": "#5c6370",
+    "editorLineNumber.activeForeground": "#abb2bf",
+    "editor.selectionBackground": "#3e4451",
+    "editor.selectionHighlightBackground": "#3e4451",
+    "editor.lineHighlightBackground": "#282c34",
+    "editorCursor.foreground": "#528bff",
+    "editorWhitespace.foreground": "#3b4048",
+    "editorIndentGuide.background1": "#3b4048",
+    "editorIndentGuide.activeBackground1": "#5c6370",
+    "editor.findMatchBackground": "#3e4451",
+    "editor.findMatchHighlightBackground": "#3e4451",
+    "editorBracketMatch.background": "#3e4451",
+    "editorBracketMatch.border": "#5c6370",
+    "editorBracketHighlight.foreground1": "#abb2bf",
+    "editorBracketHighlight.foreground2": "#abb2bf",
+    "editorBracketHighlight.foreground3": "#abb2bf",
+    "editorBracketHighlight.foreground4": "#abb2bf",
+    "editorBracketHighlight.foreground5": "#abb2bf",
+    "editorBracketHighlight.foreground6": "#abb2bf",
+    "editorBracketPairGuide.activeBackground1": "#abb2bf",
+    "editorBracketPairGuide.activeBackground2": "#abb2bf",
+    "editorBracketPairGuide.activeBackground3": "#abb2bf",
+    "editorBracketPairGuide.activeBackground4": "#abb2bf",
+    "editorBracketPairGuide.activeBackground5": "#abb2bf",
+    "editorBracketPairGuide.activeBackground6": "#abb2bf",
+    "editorBracketPairGuide.background1": "#5c6370",
+    "editorBracketPairGuide.background2": "#5c6370",
+    "editorBracketPairGuide.background3": "#5c6370",
+    "editorBracketPairGuide.background4": "#5c6370",
+    "editorBracketPairGuide.background5": "#5c6370",
+    "editorBracketPairGuide.background6": "#5c6370",
+    "editor.wordHighlightBackground": "#3e4451",
+    "editor.wordHighlightStrongBackground": "#3e4451",
+    "editorGutter.background": "#1e1e1e",
+    "editorGutter.modifiedBackground": "#d19a66",
+    "editorGutter.addedBackground": "#72c45a",
+    "editorGutter.deletedBackground": "#e16d76",
+    "editorError.foreground": "#e16d76",
+    "editorWarning.foreground": "#d19a66",
+    "editorInfo.foreground": "#62afef",
+    "editorHint.foreground": "#58b6c2",
+    "statusBar.background": "#282c34",
+    "statusBar.foreground": "#abb2bf",
+    "statusBar.noFolderBackground": "#282c34",
+    "statusBar.debuggingBackground": "#282c34",
+    "statusBarItem.prominentBackground": "#3e4451",
+    "activityBar.background": "#21252b",
+    "activityBar.foreground": "#abb2bf",
+    "activityBarBadge.background": "#528bff",
+    "sideBar.background": "#21252b",
+    "sideBar.foreground": "#abb2bf",
+    "sideBarTitle.foreground": "#abb2bf",
+    "sideBarSectionHeader.background": "#21252b",
+    "sideBarSectionHeader.foreground": "#abb2bf",
+    "list.activeSelectionBackground": "#3e4451",
+    "list.activeSelectionForeground": "#abb2bf",
+    "list.inactiveSelectionBackground": "#282c34",
+    "list.hoverBackground": "#282c34",
+    "tab.activeBackground": "#1e1e1e",
+    "tab.inactiveBackground": "#21252b",
+    "tab.activeForeground": "#abb2bf",
+    "tab.inactiveForeground": "#5c6370",
+    "tab.border": "#21252b",
+    "titleBar.activeBackground": "#21252b",
+    "titleBar.activeForeground": "#abb2bf",
+    "titleBar.inactiveBackground": "#21252b",
+    "titleBar.inactiveForeground": "#5c6370",
+    "panel.background": "#1e1e1e",
+    "panel.border": "#3b4048",
+    "panelTitle.activeForeground": "#abb2bf",
+    "panelTitle.inactiveForeground": "#5c6370",
+    "input.background": "#282c34",
+    "input.foreground": "#abb2bf",
+    "input.border": "#3b4048",
+    "inputOption.activeBorder": "#528bff",
+    "dropdown.background": "#282c34",
+    "dropdown.foreground": "#abb2bf",
+    "dropdown.border": "#3b4048",
+    "button.background": "#528bff",
+    "button.foreground": "#ffffff",
+    "button.hoverBackground": "#62afef",
+    "scrollbarSlider.background": "#3b4048",
+    "scrollbarSlider.hoverBackground": "#5c6370",
+    "scrollbarSlider.activeBackground": "#5c6370",
+    "badge.background": "#528bff",
+    "badge.foreground": "#ffffff",
+    "progressBar.background": "#528bff",
+    "textLink.foreground": "#62afef",
+    "textLink.activeForeground": "#528bff",
+    "textBlockQuote.background": "#282c34",
+    "textBlockQuote.border": "#3b4048",
+    "textCodeBlock.background": "#282c34",
+    "textPreformat.foreground": "#abb2bf",
+    "textPreformat.background": "#282c34"
+  },
+  "tokenColors": [
+    {
+      "name": "Comment",
+      "scope": [
+        "comment",
+        "punctuation.definition.comment"
+      ],
+      "settings": {
+        "foreground": "#5c6370",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Keyword",
+      "scope": [
+        "keyword",
+        "storage.type",
+        "storage.modifier",
+        "keyword.control.import",
+        "keyword.control.from"
+      ],
+      "settings": {
+        "foreground": "#e16d76"
+      }
+    },
+    {
+      "name": "Docstring - Cyan (including quotes)",
+      "scope": [
+        "string.quoted.docstring",
+        "string.quoted.triple",
+        "string.quoted.triple.single.python",
+        "string.quoted.triple.double.python",
+        "punctuation.definition.string.begin.python string.quoted.triple",
+        "punctuation.definition.string.end.python string.quoted.triple",
+        "string.quoted.triple punctuation.definition.string.begin",
+        "string.quoted.triple punctuation.definition.string.end",
+        "string.quoted.docstring punctuation.definition.string.begin",
+        "string.quoted.docstring punctuation.definition.string.end"
+      ],
+      "settings": {
+        "foreground": "#58b6c2"
+      }
+    },
+    {
+      "name": "Dictionary Key - Teal (in function call arguments)",
+      "scope": [
+        "meta.function-call.arguments.python meta.mapping.key.python string.quoted.single.python",
+        "meta.function-call.arguments.python meta.mapping.key.python string.quoted.double.python",
+        "meta.function-call.arguments.python string.quoted.single.python",
+        "meta.function-call.arguments.python string.quoted.double.python"
+      ],
+      "settings": {
+        "foreground": "#58b6c2"
+      }
+    },
+    {
+      "name": "Dictionary Key - Teal (standalone mappings)",
+      "scope": [
+        "meta.mapping.key.python string.quoted.double",
+        "meta.mapping.key.python string.quoted.single",
+        "meta.mapping.key.python string",
+        "meta.mapping.key.python",
+        "dictionary.key",
+        "source.python meta.mapping.key string.quoted.double",
+        "source.python meta.mapping.key string.quoted.single",
+        "meta.dictionary.key.python",
+        "meta.dictionary.key.python string",
+        "meta.structure.dictionary.key.python",
+        "meta.structure.dictionary.key.python string",
+        "meta.structure.dictionary.python string.quoted.double",
+        "meta.structure.dictionary.python string.quoted.single",
+        "source.python meta.structure.dictionary.key",
+        "source.python meta.structure.dictionary.key string"
+      ],
+      "settings": {
+        "foreground": "#58b6c2"
+      }
+    },
+    {
+      "name": "Dictionary Value String - Blue (in function call arguments)",
+      "scope": [
+        "meta.function-call.arguments.python meta.mapping.value.python string.quoted.single.python",
+        "meta.function-call.arguments.python meta.mapping.value.python string.quoted.double.python",
+        "meta.function-call.arguments.python meta.mapping.value.python string.template.python"
+      ],
+      "settings": {
+        "foreground": "#62afef"
+      }
+    },
+    {
+      "name": "Dictionary Value String - Blue (standalone mappings)",
+      "scope": [
+        "meta.mapping.value.python string.quoted.double",
+        "meta.mapping.value.python string.quoted.single",
+        "meta.mapping.value.python string.template",
+        "meta.mapping.value.python string",
+        "source.python meta.mapping.value string.quoted.double",
+        "source.python meta.mapping.value string.quoted.single",
+        "source.python meta.mapping.value string.template",
+        "meta.dictionary.value.python string",
+        "meta.dictionary.value.python string.quoted.double",
+        "meta.dictionary.value.python string.quoted.single",
+        "meta.structure.dictionary.value.python string"
+      ],
+      "settings": {
+        "foreground": "#62afef"
+      }
+    },
+    {
+      "name": "String - Orange (exclude dictionary contexts)",
+      "scope": [
+        "string.quoted.single",
+        "string.quoted.double",
+        "string.template"
+      ],
+      "settings": {
+        "foreground": "#d19a66"
+      }
+    },
+    {
+      "name": "Number - Purple",
+      "scope": [
+        "constant.numeric",
+        "constant.language"
+      ],
+      "settings": {
+        "foreground": "#c678de"
+      }
+    },
+    {
+      "name": "Constant - Purple",
+      "scope": [
+        "constant",
+        "constant.character",
+        "constant.other"
+      ],
+      "settings": {
+        "foreground": "#c678de"
+      }
+    },
+    {
+      "name": "Format Placeholder in Dictionary Value - Blue (override constant)",
+      "scope": [
+        "meta.function-call.arguments.python constant.character.format.placeholder.other.python",
+        "meta.function-call.arguments.python meta.format.brace.python constant.character.format.placeholder",
+        "meta.mapping.value.python constant.character.format.placeholder.other.python",
+        "meta.mapping.value.python meta.format.brace.python constant.character.format.placeholder",
+        "string.quoted.single.python constant.character.format.placeholder.other.python",
+        "string.quoted.double.python constant.character.format.placeholder.other.python",
+        "constant.character.format.placeholder.other.python"
+      ],
+      "settings": {
+        "foreground": "#62afef"
+      }
+    },
+    {
+      "name": "Function Definition - Grey",
+      "scope": [
+        "entity.name.function.definition.python",
+        "meta.function.definition.python entity.name.function.python",
+        "meta.function.definition entity.name.function"
+      ],
+      "settings": {
+        "foreground": "#abb2bf"
+      }
+    },
+    {
+      "name": "Function/Method Call - Orange",
+      "scope": [
+        "meta.function-call entity.name.function",
+        "meta.function-call.python entity.name.function.python",
+        "meta.method-call.python entity.name.function.python",
+        "support.function"
+      ],
+      "settings": {
+        "foreground": "#d19a66"
+      }
+    },
+    {
+      "name": "Type/Class - Blue",
+      "scope": [
+        "entity.name.type",
+        "entity.name.class",
+        "support.type",
+        "support.class"
+      ],
+      "settings": {
+        "foreground": "#62afef"
+      }
+    },
+    {
+      "name": "Python Decorator - Purple",
+      "scope": [
+        "punctuation.definition.decorator.python",
+        "entity.name.function.decorator.python"
+      ],
+      "settings": {
+        "foreground": "#c678de"
+      }
+    },
+    {
+      "name": "Tag - Red",
+      "scope": [
+        "entity.name.tag",
+        "punctuation.definition.tag"
+      ],
+      "settings": {
+        "foreground": "#e16d76"
+      }
+    },
+    {
+      "name": "Operator - Grey",
+      "scope": [
+        "keyword.operator",
+        "punctuation.accessor"
+      ],
+      "settings": {
+        "foreground": "#abb2bf"
+      }
+    },
+    {
+      "name": "Variables - Blue (ALL Python variables)",
+      "scope": [
+        "variable",
+        "variable.other",
+        "variable.other.readwrite",
+        "variable.parameter",
+        "variable.parameter.function"
+      ],
+      "settings": {
+        "foreground": "#62afef"
+      }
+    },
+    {
+      "name": "Property/Attribute - Orange (must come after Variables)",
+      "scope": [
+        "variable.other.property",
+        "variable.other.object.property",
+        "meta.member.access.python variable.other.readwrite.python",
+        "meta.attribute.python",
+        "entity.name.attribute",
+        "meta.import.python meta.member.access.python",
+        "meta.import.python meta.attribute.python"
+      ],
+      "settings": {
+        "foreground": "#d19a66"
+      }
+    },
+    {
+      "name": "Module/Namespace/Imports - Blue (must come after Variables)",
+      "scope": [
+        "entity.name.type.module.python",
+        "entity.name.namespace.python",
+        "meta.import.python entity.name.type.module.python",
+        "meta.import.python entity.name.namespace.python",
+        "meta.import.python entity.name.type.class.python",
+        "meta.import.python entity.name.function.python",
+        "meta.import.python variable.other.readwrite.alias.python",
+        "variable.other.readwrite.alias.python",
+        "meta.member.access.python variable.other.readwrite.python",
+        "meta.import.python support.type.python",
+        "meta.import.python support.function.python",
+        "meta.import.python variable.other.readwrite.python",
+        "meta.import.python variable",
+        "source.python meta.import.python variable",
+        "source.python meta.import.python entity.name",
+        "meta.import.python meta.member.access.python variable.other.readwrite.python",
+        "meta.import.python meta.member.access.python entity.name.type.module.python"
+      ],
+      "settings": {
+        "foreground": "#62afef"
+      }
+    },
+    {
+      "name": "Attributes/Submodules in Imports - Orange (override module rule)",
+      "scope": [
+        "meta.import.python meta.member.access.python",
+        "meta.import.python meta.attribute.python",
+        "source.python meta.import.python meta.member.access.python"
+      ],
+      "settings": {
+        "foreground": "#d19a66"
+      }
+    },
+    {
+      "name": "Markdown Heading - Blue",
+      "scope": [
+        "markup.heading"
+      ],
+      "settings": {
+        "foreground": "#62afef",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Markdown Code - Background only (let language rules handle foreground)",
+      "scope": [
+        "markup.inline.raw",
+        "markup.fenced_code.block"
+      ],
+      "settings": {
+        "background": "#282c34"
+      }
+    },
+    {
+      "name": "Python source - Blue (fallback, overridden by specific rules, exclude punctuation)",
+      "scope": [
+        "source.python"
+      ],
+      "settings": {
+        "foreground": "#62afef"
+      }
+    },
+    {
+      "name": "Submodules in Imports - Orange (override source.python for imports, exclude punctuation)",
+      "scope": [
+        "meta.import.python meta.member.access.python",
+        "meta.import.python meta.attribute.python"
+      ],
+      "settings": {
+        "foreground": "#d19a66"
+      }
+    },
+    {
+      "name": "Punctuation - Grey (CATCH-ALL - MUST BE ABSOLUTE LAST - OVERRIDES EVERYTHING)",
+      "scope": [
+        "punctuation",
+        "punctuation.separator",
+        "punctuation.terminator",
+        "punctuation.definition",
+        "punctuation.definition.bracket",
+        "punctuation.section",
+        "punctuation.section.brackets",
+        "punctuation.section.braces",
+        "punctuation.section.parens",
+        "punctuation.definition.list",
+        "punctuation.definition.dict",
+        "punctuation.definition.array",
+        "punctuation.definition.parameters",
+        "punctuation.definition.parameters.begin",
+        "punctuation.definition.parameters.end",
+        "punctuation.definition.list.begin",
+        "punctuation.definition.list.end",
+        "punctuation.definition.dict.begin",
+        "punctuation.definition.dict.end",
+        "punctuation.definition.array.begin",
+        "punctuation.definition.array.end",
+        "punctuation.definition.parameters.begin.python",
+        "punctuation.definition.parameters.end.python",
+        "punctuation.definition.arguments.begin.python",
+        "punctuation.definition.arguments.end.python",
+        "punctuation.definition.list.begin.python",
+        "punctuation.definition.list.end.python",
+        "punctuation.definition.dict.begin.python",
+        "punctuation.definition.dict.end.python",
+        "punctuation.definition.array.begin.python",
+        "punctuation.definition.array.end.python",
+        "punctuation.section.brackets.begin.python",
+        "punctuation.section.brackets.end.python",
+        "punctuation.section.braces.begin.python",
+        "punctuation.section.braces.end.python",
+        "punctuation.section.parens.begin.python",
+        "punctuation.section.parens.end.python",
+        "source.python punctuation",
+        "source.python punctuation.definition",
+        "source.python punctuation.section",
+        "meta.function-call.python punctuation",
+        "meta.function-call.arguments.python punctuation",
+        "meta.mapping.python punctuation",
+        "meta.structure.dictionary.python punctuation",
+        "meta.import.python punctuation",
+        "meta.import.python meta.member.access.python punctuation",
+        "source.python meta.function-call.python punctuation",
+        "source.python meta.function-call.arguments.python punctuation",
+        "source.python meta.mapping.python punctuation",
+        "source.python meta.structure.dictionary.python punctuation"
+      ],
+      "settings": {
+        "foreground": "#abb2bf",
+        "fontStyle": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "baseline-theme",
+  "displayName": "Baseline Theme",
+  "description": "VS Code theme based on Obsidian Baseline theme code colors",
+  "version": "1.0.0",
+  "publisher": "baseline",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "baseline",
+    "obsidian",
+    "theme",
+    "dark",
+    "light"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Baseline Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/baseline-dark.json"
+      },
+      {
+        "label": "Baseline Light",
+        "uiTheme": "vs",
+        "path": "./themes/baseline-light.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aaaaalexis/obsidian-baseline"
+  },
+  "license": "MIT",
+  "extensionKind": [
+    "ui"
+  ]
+}
+

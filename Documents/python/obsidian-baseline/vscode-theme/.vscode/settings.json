@@ -1,0 +1,4 @@
+{
+    "editor.semanticHighlighting.enabled": true,
+    "python.analysis.typeCheckingMode": "off"
+  }
