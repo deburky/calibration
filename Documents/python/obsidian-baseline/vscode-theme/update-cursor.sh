@@ -64,3 +64,20 @@ echo "4. If colors don't update, press Cmd+Shift+P → 'Developer: Reload Window
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
