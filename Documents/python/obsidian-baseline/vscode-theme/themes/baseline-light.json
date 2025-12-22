@@ -2,21 +2,14 @@
   "$schema": "vscode://schemas/color-theme",
   "name": "Baseline Light",
   "type": "light",
-  "semanticHighlighting": true,
+  "semanticHighlighting": false,
   "semanticTokenColors": {
-    "variable": "#383a42",
-    "variable.readonly": "#383a42",
-    "variable.defaultLibrary": "#383a42",
-    "parameter": "#383a42",
-    "property": "#383a42",
-    "property.readonly": "#383a42",
-    "function": "#b76b02",
-    "method": "#b76b02",
-    "class": "#62afef",
-    "type": "#62afef",
-    "namespace": "#62afef",
-    "module": "#62afef",
-    "enumMember": "#383a42"
+    "property": "#b76b02",
+    "property.readonly": "#b76b02",
+    "*.attribute": "#b76b02",
+    "namespace.attribute": "#b76b02",
+    "module.attribute": "#b76b02",
+    "module": "#0d7377"
   },
   "colors": {
     "editor.background": "#ffffff",
@@ -191,6 +184,20 @@
       }
     },
     {
+      "name": "Attributes/Submodules in Imports - Orange",
+      "scope": [
+        "meta.import.python meta.member.access.python",
+        "meta.import.python meta.attribute.python",
+        "source.python meta.import.python meta.member.access.python",
+        "meta.import-name.python meta.member-access.python",
+        "meta.import-name.python meta.member-access.python variable.other.readwrite.python",
+        "meta.import-name.python meta.member-access.python entity.name.type.module.python"
+      ],
+      "settings": {
+        "foreground": "#b76b02"
+      }
+    },
+    {
       "name": "Property/Attribute - Orange",
       "scope": [
         "variable.other.property",
@@ -310,10 +317,13 @@
       "scope": [
         "entity.name.function.python",
         "entity.name.class.python",
-        "entity.name.type.class.python"
+        "entity.name.type.class.python",
+        "meta.function.python entity.name.function.python",
+        "meta.function.definition.python entity.name.function.python",
+        "source.python meta.function.python entity.name.function.python"
       ],
       "settings": {
-        "foreground": "#b76b02"
+        "foreground": "#383a42"
       }
     },
     {

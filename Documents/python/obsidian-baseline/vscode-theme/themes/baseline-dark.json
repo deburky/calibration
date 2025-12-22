@@ -101,6 +101,14 @@
     "textPreformat.foreground": "#abb2bf",
     "textPreformat.background": "#282c34"
   },
+  "semanticTokenColors": {
+    "property": "#d19a66",
+    "property.readonly": "#d19a66",
+    "*.attribute": "#d19a66",
+    "namespace.attribute": "#d19a66",
+    "module.attribute": "#d19a66",
+    "module": "#62afef"
+  },
   "tokenColors": [
     {
       "name": "Comment",
@@ -261,7 +269,9 @@
       "scope": [
         "entity.name.function.definition.python",
         "meta.function.definition.python entity.name.function.python",
-        "meta.function.definition entity.name.function"
+        "meta.function.definition entity.name.function",
+        "meta.function.python entity.name.function.python",
+        "source.python meta.function.python entity.name.function.python"
       ],
       "settings": {
         "foreground": "#abb2bf"
@@ -379,7 +389,10 @@
       "scope": [
         "meta.import.python meta.member.access.python",
         "meta.import.python meta.attribute.python",
-        "source.python meta.import.python meta.member.access.python"
+        "source.python meta.import.python meta.member.access.python",
+        "meta.import-name.python meta.member-access.python",
+        "meta.import-name.python meta.member-access.python variable.other.readwrite.python",
+        "meta.import-name.python meta.member-access.python entity.name.type.module.python"
       ],
       "settings": {
         "foreground": "#d19a66"
@@ -418,7 +431,11 @@
       "name": "Submodules in Imports - Orange (override source.python for imports, exclude punctuation)",
       "scope": [
         "meta.import.python meta.member.access.python",
-        "meta.import.python meta.attribute.python"
+        "meta.import.python meta.attribute.python",
+        "source.python meta.import.python",
+        "meta.import.python source.python",
+        "meta.import.python meta.member.access.python source.python",
+        "source.python meta.import.python meta.member.access.python"
       ],
       "settings": {
         "foreground": "#d19a66"
